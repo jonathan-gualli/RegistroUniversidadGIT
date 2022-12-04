@@ -3,10 +3,12 @@ package registrouniversidadgit;
 import java.util.Scanner;
 
 public class RegistroUniversidadGIT {
-       
+
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
+        
+        Operaciones op = new Operaciones();
 
         int opcion = 0;
 
@@ -20,6 +22,27 @@ public class RegistroUniversidadGIT {
             System.out.println("[9] -- TERMINAR PROGRAMA");
             System.out.print("Opcion: ");
             opcion = Integer.parseInt(teclado.nextLine());
+
+            switch (opcion) {
+                case 1:
+                    op.registrarNuevosEstudiantes();
+                    break;
+                case 2:
+                    op.listarNotasDefinitivas();
+                    break;
+                case 3:
+                    op.listarPromedioEstudiantes();
+                    break;
+                case 4:
+                    op.listarPromediosNotasDefinitivas();
+                    break;
+                case 9:
+                    System.out.println("\n\t\tFIN DE PROGRAMA");
+                    break;
+                default:
+                    System.out.println("Opción equivocada");
+            }
+
         } while (opcion != 9);
 
     }
