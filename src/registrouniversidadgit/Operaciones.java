@@ -66,4 +66,38 @@ public class Operaciones {
             }
         }
     }
+    public void listarPromedioEstudiantes() {
+        if (estudiantes == null) {
+            System.out.println("No hay Estudiantes registrados.");
+        } else {
+            System.out.println("\n\tPROMEDIO GENERAL POR ESTUDIANTES");
+            //Recorremos Estudiantes y les pedimos su promedio
+            for (Estudiante estu : estudiantes) {
+                System.out.println("\nNombre: " + estu.getNombre());
+                System.out.println("Promedio General: " + estu.getPromedioGeneral());
+            }
+        }
+    }
+    
+    public void listarPromediosNotasDefinitivas() {
+        if (estudiantes == null) {
+            System.out.println("No hay Estudiantes registrados.");
+        } else {
+            System.out.println("\n\tPROMEDIOS NOTAS DEFINITIVAS");
+            //Recorremos Asignaturas
+            for (int asig = 0; asig < ASIGNATURAS.length; asig++) {
+                System.out.println("\nAsignatura: " + ASIGNATURAS[asig]);
+                /*
+				 * Por cada Asignatura, sumamos las notas definitivas de los
+				 * 5 Estudiantes. Con esta suma, luego calcularemos el promedio
+                 */
+                int sumaNotas = 0;
+                for (Estudiante estu : estudiantes) {
+                    sumaNotas += estu.getNotaDeAsignatura(asig);
+                }
+                //Tenemos la suma, calculamos promedio
+                System.out.println("Promedio de notas: " + (sumaNotas / estudiantes.length));
+            }
+        }
+    }
 }
