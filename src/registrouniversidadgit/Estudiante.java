@@ -8,15 +8,15 @@ package registrouniversidadgit;
  *
  * @author david
  */
-public class est {
+public class Estudiante {
     
     private Asignatura[] asignaturas = new Asignatura[5];
     private String nombre;
 
-    public est() {
+    public Estudiante() {
     }
 
-    public estudiante(String nombre) {
+    public Estudiante(String nombre) {
         this.nombre = nombre;
     }
 
