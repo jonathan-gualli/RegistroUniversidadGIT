@@ -49,4 +49,21 @@ public class Operaciones {
             //Ahora se volverá a repetir el ciclo para otro Estudiante, hasta completar los 5
         }
     }
+    
+    public void listarNotasDefinitivas() {
+        if (estudiantes == null) {
+            System.out.println("No hay Estudiantes registrados.");
+        } else {
+            System.out.println("\n\tNOTAS DEFINITIVAS POR ESTUDIANTES");
+            //Recorremos cada Asignatura
+            for (int asig = 0; asig < ASIGNATURAS.length; asig++) {
+                System.out.println("\n- Asignatura: " + ASIGNATURAS[asig]);
+                //Recorremos cada Estudiante para obtener su nota en la Asignatura actual
+                for (Estudiante estu : estudiantes) {
+                    System.out.println("Nombre: " + estu.getNombre());
+                    System.out.println("Nota Definitiva: " + estu.getNotaDeAsignatura(asig));
+                }
+            }
+        }
+    }
 }
