@@ -1,10 +1,13 @@
 package registrouniversidadgit;
 
-public class RegistroUniversidadGIT {
-    
-    Scanner teclado = new Scanner(System.in);
+import java.util.Scanner;
 
+public class RegistroUniversidadGIT {
+        
     public static void main(String[] args) {
+        
+        Scanner teclado = new Scanner(System.in);
+        
         int opcion = 0;
 
         do {
