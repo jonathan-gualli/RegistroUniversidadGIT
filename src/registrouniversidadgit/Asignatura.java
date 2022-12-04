@@ -8,18 +8,18 @@ package registrouniversidadgit;
  *
  * @author Ordenador
  */
-public class asignatura {
+public class Asignatura {
     
 
-    //cada asignatura tiene tres notas parciales
+    //cada Asignatura tiene tres notas parciales
     private int[] parciales = new int[3];
     private String nombre;
 
-    public asignatura(String nombre) {
+    public Asignatura(String nombre) {
         this.nombre = nombre;
     }
 
-    public asignatura() {
+    public Asignatura() {
     }
 
     public String getNombre() {
