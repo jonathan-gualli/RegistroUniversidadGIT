@@ -66,4 +66,22 @@ public class Operaciones {
             }
         }
     }
+    
+    public void listarPromedioEstudiantes() {
+        if (estudiantes == null) {
+            System.out.println("No hay Estudiantes registrados.");
+        } else {
+            System.out.println("\n\tPROMEDIO GENERAL POR ESTUDIANTES");
+            //Recorremos Estudiantes y les pedimos su promedio
+            for (Estudiante estu : estudiantes) {
+                System.out.println("\nNombre: " + estu.getNombre());
+                System.out.println("Promedio General: " + estu.getPromedioGeneral());
+            }
+        }
+    }
+    
+    
+    
+    
+    
 }
