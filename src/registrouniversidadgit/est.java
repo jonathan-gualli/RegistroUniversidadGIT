@@ -10,4 +10,39 @@ package registrouniversidadgit;
  */
 public class est {
     
+    private Asignatura[] asignaturas = new Asignatura[5];
+    private String nombre;
+
+    public est() {
+    }
+
+    public estudiante(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void registrarAsignatura(Asignatura asign, int posicion) {
+        asignaturas[posicion] = asign;
+    }
+
+    public int getNotaDeAsignatura(int posicion) {
+        return asignaturas[posicion].getNotaDefinitiva();
+    }
+
+    public int getPromedioGeneral() {
+        //Sumamos las notas definitivas de sus asignaturas 
+        int sumaNotas = 0;
+        for (Asignatura asign : asignaturas) {
+            sumaNotas += asign.getNotaDefinitiva();
+        }
+        // retornamos el promedio
+        return sumaNotas / 5;
+    }
 }
