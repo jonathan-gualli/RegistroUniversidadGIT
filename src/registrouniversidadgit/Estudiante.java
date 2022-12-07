@@ -11,21 +11,21 @@ package registrouniversidadgit;
 public class Estudiante {
     
     private Asignatura[] asignaturas = new Asignatura[5];
-    private String nombre;
+    private String nom;
 
     public Estudiante() {
     }
 
     public Estudiante(String nombre) {
-        this.nombre = nombre;
+        this.nom = nombre;
     }
 
     public String getNombre() {
-        return nombre;
+        return nom;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nom = nombre;
     }
 
     public void registrarAsignatura(Asignatura asign, int posicion) {
